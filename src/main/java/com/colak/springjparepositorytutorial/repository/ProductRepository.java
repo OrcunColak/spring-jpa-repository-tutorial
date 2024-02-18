@@ -8,13 +8,14 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 import java.util.Optional;
 
-public interface ProductRepository extends JpaRepository<Product, Long> , ProductCustomRepository{
+public interface ProductRepository extends JpaRepository<Product, Long>, ProductCustomRepository {
 
     // exists keyword examples
-    boolean  existsByName(String name);
+    boolean existsByName(String name);
 
     // find keyword examples
     Optional<Product> findByName(String name);
+
     List<Product> findAllByPriceEquals(double price);
 
     //@Query examples
