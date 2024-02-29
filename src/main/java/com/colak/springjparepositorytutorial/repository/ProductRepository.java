@@ -10,6 +10,9 @@ import java.util.Optional;
 
 public interface ProductRepository extends JpaRepository<Product, Long>, ProductCustomRepository {
 
+    // count keyword examples
+    long countByName(String name);
+
     // exists keyword examples
     boolean existsByName(String name);
 
